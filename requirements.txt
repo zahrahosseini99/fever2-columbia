@@ -1,6 +1,6 @@
 git+https://github.com/facebookresearch/DrQA.git@a03848d216aff1763da7dff5c8d20e35c6ab379e
-git+https://github.com/huggingface/pytorch-pretrained-BERT.git@3ba5470eb85464df62f324bea88e20da234c423f
 alabaster==0.7.12
+pytorch-pretrained-bert==0.6.0
 allennlp==0.8.3
 asn1crypto==0.24.0
 atomicwrites==1.3.0
@@ -63,7 +63,7 @@ overrides==1.9
 packaging==19.0
 parsimonious==0.8.1
 pbr==5.1.3
-pexpect==4.7
+pexpect==4.2.1
 plac==0.9.6
 pluggy==0.9.0
 preshed==2.0.1
@@ -108,7 +108,7 @@ thinc==7.0.4
 torch==1.0.1.post2
 tqdm==4.31.1
 Unidecode==1.0.23
-urllib3==1.24.1
+urllib3==1.24.3
 waitress==1.2.1
 wasabi==0.2.1
 wcwidth==0.1.7
