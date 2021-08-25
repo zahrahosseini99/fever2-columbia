@@ -21,7 +21,7 @@ from torch.utils.data.distributed import DistributedSampler
 
 from pytorch_pretrained_bert.file_utils import cached_path
 from pytorch_pretrained_bert.tokenization import BertTokenizer
-from pytorch_pretrained_bert.modeling import BertModel, PreTrainedBertModel, BertConfig, CONFIG_NAME, WEIGHTS_NAME
+from pytorch_pretrained_bert.modeling import BertModel, BertPreTrainedModel, BertConfig, CONFIG_NAME, WEIGHTS_NAME
 CLASSIFIER_CONFIG_NAME = "classifier_config.json"
 
 logging.basicConfig(format = '%(asctime)s - %(levelname)s - %(name)s -   %(message)s', 
@@ -29,7 +29,7 @@ logging.basicConfig(format = '%(asctime)s - %(levelname)s - %(name)s -   %(messa
                     level = logging.INFO)
 logger = logging.getLogger(__name__)
 
-class BertForMultipleSequenceClassification(PreTrainedBertModel):
+class BertForMultipleSequenceClassification(BertPreTrainedModel):
     def __init__(self, config, model=None, num_sequences=5, num_labels=3,
                  pooling=('concat',), return_reps=True):
         super(BertForMultipleSequenceClassification, self).__init__(config)
